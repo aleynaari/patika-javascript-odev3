@@ -98,3 +98,19 @@ function addButton() {
   document.getElementById('Japan').addEventListener('click',addFoodsJapan)
   document.getElementById('China').addEventListener('click',addFoodsChina)
 }
+
+function foodCreator(name) {
+  let item = `<div class="menu-items col-lg-6 col-sm-12">
+  <img src="${name.img}" alt="${name.title}" class="photo">
+  <div class="menu-info">
+    <div class="menu-title">
+      <h4>${name.title}</h4>
+      <h4 class="price">${name.price}</h4>
+    </div>
+    <div class="menu-text">
+      ${name.desc}
+    </div>
+  </div>
+</div>`
+  return item
+}
