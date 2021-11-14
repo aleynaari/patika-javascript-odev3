@@ -81,3 +81,20 @@ const menu = [
     desc: `Red bean paste dessert, serving with honey.`,
   },
 ];
+
+
+let section = document.querySelector(".section-center")
+let container = document.querySelector(".btn-container")
+
+function createButton(buttonName) {
+  let btn = `<button class="btn btn-outline-dark btn-item" id="${buttonName}">${buttonName}</button>`
+  return btn
+}
+
+function addButton() {
+  container.innerHTML = createButton("All") + " " + createButton("Korea") + " " + createButton("Japan") + " " + createButton("China")
+  document.getElementById('All').addEventListener('click',addFoodsAll)
+  document.getElementById('Korea').addEventListener('click',addFoodsKorea)
+  document.getElementById('Japan').addEventListener('click',addFoodsJapan)
+  document.getElementById('China').addEventListener('click',addFoodsChina)
+}
