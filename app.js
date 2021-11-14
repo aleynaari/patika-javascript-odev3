@@ -114,3 +114,38 @@ function foodCreator(name) {
 </div>`
   return item
 }
+
+function addFoodsAll() {
+  section.innerHTML = ""
+  menu.forEach(element => {
+    section.innerHTML += (" " + foodCreator(element))
+  });
+}
+
+function addFoodsKorea() {
+  section.innerHTML = ""
+  const koreanMenu = menu.filter(x => x.category == "Korea")
+  koreanMenu.forEach(element => {
+    section.innerHTML += (" " + foodCreator(element))
+  });
+}
+
+function addFoodsJapan() {
+  section.innerHTML = ""
+  const koreanMenu = menu.filter(x => x.category == "Japan")
+  koreanMenu.forEach(element => {
+    section.innerHTML += (" " + foodCreator(element))
+  });
+}
+
+function addFoodsChina() {
+  section.innerHTML = ""
+  const koreanMenu = menu.filter(x => x.category == "China")
+  koreanMenu.forEach(element => {
+    section.innerHTML += (" " + foodCreator(element))
+  });
+}
+
+
+window.addEventListener('load',addButton)
+window.addEventListener('load',addFoodsAll)
